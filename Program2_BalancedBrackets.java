@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class Program2_BalancedBrackets 
 {
-	//Author - https://github.com/MythiliPrabaharan
+	//https://github.com/MythiliPrabaharan
 	public static void main(String[] args)
 	{
 		String str = "{[]}";
