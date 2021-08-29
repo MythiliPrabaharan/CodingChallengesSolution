@@ -1,6 +1,6 @@
 public class Program1_ReverseCharacterArray 
 {
-	//Author - https://github.com/MythiliPrabaharan
+	//https://github.com/MythiliPrabaharan
 	public static void reverseChar(char[] s)
 	{
 		char tmp = '0'; 
