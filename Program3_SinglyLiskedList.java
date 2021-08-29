@@ -1,6 +1,6 @@
 public class SinglyLinkedList 
 {
-	//Author - https://github.com/MythiliPrabaharan
+	//https://github.com/MythiliPrabaharan
 	class Node
 	{
 		int data;
