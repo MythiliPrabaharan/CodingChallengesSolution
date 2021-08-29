@@ -2,7 +2,7 @@ public class RepeatStringCount
 {
 	//Input  - aaaaaaabcccccccccccccc
 	//Output - a7b1c14
-	
+	//Author - https://github.com/MythiliPrabaharan
 	public static void repeatStringcount(String input)
 	{
 		int n = input.length();
