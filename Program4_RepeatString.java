@@ -2,7 +2,7 @@ public class RepeatString
 {
 	//Input  -  a1b10c3
 	//Output -  abbbbbbbbbbccc 
-	
+	//Author - https://github.com/MythiliPrabaharan
 	public static String repeatString(String input)
 	{
 		String num = input.replaceAll("[^\\d]", " ").trim().replaceAll(" +", ",");
