@@ -1,6 +1,6 @@
 public class Program1_ReverseCharacterArray 
 {
-	public static void reverseString(char[] s)
+	public static void reverseChar(char[] s)
 	{
 		char tmp = '0'; 
 		for(int i = 0; i < s.length / 2; i++)
@@ -15,6 +15,6 @@ public class Program1_ReverseCharacterArray
 	public static void main(String[] args)
 	{
 		char[] s = {'h','e','l','l','o'};
-		reverseString(s);
+		reverseChar(s);
 	}
 }
