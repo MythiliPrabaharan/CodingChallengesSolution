@@ -48,13 +48,77 @@ public class SinglyLinkedList
 		}
 		else
 		{
-			Node current = head;
-			for(int i=0; i<position-1; i++)
-				current = current.next;
+			int length = this.listLength();
+			if(position < length)
+			{
+				Node current = head;
+				for(int i=0; i<position-1; i++)
+					current = current.next;
 
-			newNode.next = current.next;
-			current.next = newNode;
+				newNode.next = current.next;
+				current.next = newNode;
+			}
+			else
+			{
+				System.out.println("The list contains only "+length+" elements.");
+				return;
+			}
 		}
+	}
+
+	public void remove(int data)
+	{
+		Node current = head;
+		if(head.data == data)
+		{
+			head = head.next;
+		}
+		else
+		{
+			while(current.next!=null)
+			{
+				if(current.next.data == data)
+					current.next = current.next.next;
+				else
+					current = current.next;
+			}
+		}
+	}
+
+	public void removePosition(int position)
+	{
+		int length = this.listLength();
+		Node current = head;
+		if(position < length)
+		{
+			if(position == 0)
+			{
+				head = head.next;				
+			}
+			else
+			{
+				for(int i=0;i<position-1;++i)
+					current = current.next;
+				current.next = current.next.next;
+			}
+
+		}
+		else
+		{
+			System.out.println("The list contains only "+length+" elements.");
+			return;
+		}
+	}
+	public int listLength()
+	{
+		int i = 0;
+		Node current = head;
+		while(current != null)
+		{
+			++i;
+			current = current.next;
+		}
+		return i;
 	}
 
 	public void display()
@@ -78,6 +142,7 @@ public class SinglyLinkedList
 	}
 
 
+
 	public static void main(String[] args)
 	{
 		SinglyLinkedList list = new SinglyLinkedList();
@@ -86,9 +151,8 @@ public class SinglyLinkedList
 		list.prepend(22);
 		list.prepend(11);
 		list.insert(2, 33);
+		list.remove(44);
+		list.removePosition(2);
 		list.display();
-
-
 	}
 }
-
