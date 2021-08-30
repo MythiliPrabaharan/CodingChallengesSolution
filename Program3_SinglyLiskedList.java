@@ -12,8 +12,8 @@ public class SinglyLinkedList
 			this.next = null;
 		}
 	}
-	public Node head = null;
-	public Node tail = null;
+	public static Node head = null;
+	public static Node tail = null;
 
 	public void prepend(int data)
 	{
@@ -29,6 +29,22 @@ public class SinglyLinkedList
 			Node temp = head;
 			head = newNode;
 			head.next = temp;
+		}
+	}
+	public void append(int data)
+	{
+		Node newNode = new Node(data);
+		Node current = head;
+		if(head == null)
+		{
+			head = newNode;
+			tail = newNode;
+		}
+		else
+		{
+			while(current.next!=null)
+				current=current.next;
+			current.next=newNode;
 		}
 	}
 
@@ -126,7 +142,7 @@ public class SinglyLinkedList
 		Node current = head;
 		if(head == null)
 		{
-			System.out.println("The list is empty");
+			System.out.println("The list is empty.");
 		}
 		else
 		{
@@ -138,11 +154,55 @@ public class SinglyLinkedList
 					System.out.print(current.data + "-->");
 				current = current.next;
 			}
+			System.out.println();
 		}
 	}
-
-
-
+	public void reverseList() 
+	{ 
+		Node temp = head; 
+		Node previous = null, current = null; 
+		while (temp != null) 
+		{ 
+			current = temp; 
+			temp = temp.next;
+			current.next = previous; 
+			previous = current; 
+			head = current; 
+		}
+		System.out.println();
+	}
+	
+	public void reverseListRecursion(Node head) 
+	{
+		
+		if(head == null) 
+		{  
+			System.out.println("List is empty");  
+			return;  
+		}  
+		else 
+		{  
+			if(head.next == null) 
+			{  
+				System.out.print(head.data);  
+				return;  
+			} 		
+			reverseListRecursion(head.next);  
+			System.out.print("-->");
+			System.out.print(head.data);  
+		}  
+	}
+	public void addList()
+	{
+		int sum = 0;
+		Node current = head;
+		while(current!=null)
+		{
+			sum+=current.data;
+			current = current.next;
+		}
+		System.out.println(sum);
+	}
 	public static void main(String[] args)
 	{
 		SinglyLinkedList list = new SinglyLinkedList();
@@ -153,6 +213,11 @@ public class SinglyLinkedList
 		list.insert(2, 33);
 		list.remove(44);
 		list.removePosition(2);
+		list.append(55);
 		list.display();
+		list.reverseListRecursion(head);
+		list.reverseList();
+		list.display();
+		list.addList();
 	}
 }
