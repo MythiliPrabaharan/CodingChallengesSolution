@@ -1,4 +1,4 @@
-public class Program3_SinglyLiskedList 
+public class Program3_SinglyLinkedList 
 {
 	//https://github.com/MythiliPrabaharan
 	class Node
@@ -205,7 +205,7 @@ public class Program3_SinglyLiskedList
 	}
 	public static void main(String[] args)
 	{
-		Program3_SinglyLiskedList list = new Program3_SinglyLiskedList();
+		Program3_SinglyLinkedList list = new Program3_SinglyLinkedList();
 
 		list.prepend(44); 
 		list.prepend(22);
