@@ -1,4 +1,4 @@
-public class RepeatString 
+public class Program4_RepeatString 
 {
 	//Input  -  a1b10c3
 	//Output -  abbbbbbbbbbccc 
