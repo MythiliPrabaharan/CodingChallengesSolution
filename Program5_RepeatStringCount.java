@@ -1,4 +1,4 @@
-public class RepeatStringCount 
+public class Program5_RepeatStringCount 
 {
 	//Input  - aaaaaaabcccccccccccccc
 	//Output - a7b1c14
