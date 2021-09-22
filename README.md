@@ -7,3 +7,4 @@
 5) Program5_RepeatStringCount.java         -   To implement string manipulation. Input - aaaaaaabcccccccccccccc; Output - a7b1c14  
 6) Program6_BinarySearchRecursion.java     -   To implement binary search using recursion.
 7) Program7_TwoSum.java                    -   To return indices of the two numbers such that they add up to target.
+8) Program8_RecursionPower.java            -   To return the power of a number using recursive function.
